@@ -18,7 +18,7 @@ const Navbar = () => {
             className='cursor-pointer'
             src={Logo}
             alt='Taktak'
-            Layout='responsive'
+            layout='responsive'
           />
         </div>
       </Link>
