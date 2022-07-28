@@ -1,10 +1,10 @@
 import React from 'react';
 import { footerList1, footerList2, footerList3 } from '../utils/constants';
 
-// Define items as String of array
-// Make this code reusable
-const List = ({ items }: {items: string[]}) => (
-  <div className='flex flex-wrap gap-2 mt-5'>
+// Define "items" as String of array and "mt" as boolean
+// Make this code reusable and dynamic
+const List = ({ items, mt }: { items: string[], mt:boolean }) => (
+  <div className={`flex flex-wrap gap-2 ${mt && 'mt-5'}`}>
         {items.map((item) => (
           <p key={item} className='text-gray-400 text-sm hover:underline cusrsor-pointer'>
             {item}
@@ -16,9 +16,12 @@ const List = ({ items }: {items: string[]}) => (
 const Footer = () => {
   return (
     <div className='mt-6 hidden xl:block'>
-      <List items={footerList1} />
-      <List items={footerList2} />
-      <List items={footerList3} />
+      <List items={footerList1} mt={false} />
+      <List items={footerList2} mt />
+      <List items={footerList3} mt />
+      <p className='text-gray-400 text-sm mt-5'>
+        © 2022 JSM TakTak
+      </p>
     </div>
   )
 }
