@@ -1,6 +1,11 @@
-import React from 'react'
+import React from 'react';
 
-const NoResults = () => {
+interface IProps {
+  text: string;
+}
+
+// Use the simpler declaration without using NextPage
+const NoResults = ({ text }: IProps) => {
   return (
     <div>NoResults</div>
   )

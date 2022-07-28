@@ -10,6 +10,7 @@ interface IProps {
 // const VideoCard = ({ post }: IProps) => {}
 // Better and version is using NextPage
 const VideoCard: NextPage<IProps> = ({ post }) => {
+
   return (
     <div>VideoCard</div>
   )
